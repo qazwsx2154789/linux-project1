@@ -4,8 +4,8 @@
 
 This project explores virtual-to-physical address translation in the Linux kernel on ARM64 architecture.
 
-- **Problem 1**: Implement a custom Linux kernel system call `my_get_physical_addresses()` that walks the five-level page table (PGD → P4D → PUD → PMD → PTE) to translate virtual addresses (VA) to physical addresses (PA).
-- **Problem 2**: Use Python's `ctypes` module to call the system call via a shared C library, and observe heap growth and lazy allocation behavior.
+- **Question 1**: Implement a custom Linux kernel system call `my_get_physical_addresses()` that walks the five-level page table (PGD → P4D → PUD → PMD → PTE) to translate virtual addresses (VA) to physical addresses (PA).
+- **Question 2**: Use Python's `ctypes` module to call the system call via a shared C library, and observe heap growth and lazy allocation behavior.
 
 ## Environment
 | Item | Description |
@@ -16,11 +16,11 @@ This project explores virtual-to-physical address translation in the Linux kerne
 | GCC | 11.4.0 |
 | Python | 3.10+ |
 
-## Problem 1 – Kernel System Call
+## Question 1 – Kernel System Call
 
 ### Files
-- `problem1/my_get_physical_addresses.c` – Kernel syscall implementation
-- `problem1/test_getpa.c` – User-space test program
+- `question1/my_get_physical_addresses.c` – Kernel syscall implementation
+- `question1/test_getpa.c` – User-space test program
 
 ### Build & Run
 Add `my_get_physical_addresses.c` to the kernel source, register syscall 449, then rebuild the kernel:
@@ -36,11 +36,11 @@ gcc test_getpa.c -o test_getpa
 sudo ./test_getpa
 ```
 
-## Problem 2 – Python ctypes
+## Question 2 – Python ctypes
 
 ### Files
-- `problem2/my_get_phy.c` – C wrapper for the syscall (compiled to shared library)
-- `problem2/test_heap.py` – Python test program
+- `question2/my_get_phy.c` – C wrapper for the syscall (compiled to shared library)
+- `question2/test_heap.py` – Python test program
 
 ### Build & Run
 ```bash

@@ -1,13 +1,5 @@
 # Linux Project 1 – Virtual to Physical Address Translation
 
-## Team Members
-| Name | Student ID |
-|:-----|:-----------|
-| 呂紀緯 | 114522134 |
-| 李宗仁 | 114522018 |
-| 鄧暋翰 | 113522153 |
-| 黃懷鈺 | 113582003 |
-
 ## Overview
 
 This project explores virtual-to-physical address translation in the Linux kernel on ARM64 architecture.
